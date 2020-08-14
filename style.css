@@ -1,0 +1,82 @@
+h1{
+  animation-name:fallen;
+  animation-duration:1s;
+}
+
+h2{
+  animation-name:hoch;
+  animation-duration:0.5s;
+}
+
+body {
+  background-color:#b3d6f5;
+}
+
+button {
+  animation-name:hoch;
+  animation-duration:1s;
+  width:100px;
+  height:50px;
+  display:block;
+  background-color:#fa7d7f;
+  border: 1px solid #000000;
+  margin-left:auto;
+  margin-right:auto;
+  cursor:pointer;
+}
+
+button:hover{
+  animation-name:rotate;
+  animation-duration:1s;
+  background-color:#bd395a;
+}
+
+#Bild {
+  animation-name:skalieren;
+  animation-duration:1s;
+  animation-iteration-count:1;
+  width:700px;
+  height:500px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@keyframes fallen {
+  0%{
+    opacity:0;
+    transform:translatey(-80px);
+  }
+  100%{
+    opacity:1;
+    transform:translatey(0px);
+  }
+}
+
+@keyframes skalieren{
+  0%{
+    transform: scale(0,0);
+  }
+  
+  100%{
+    transform:scale(1,1);
+  }
+}
+@keyframes rotate{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+@keyframes hoch {
+  0%{
+    opacity:0;
+    transform:translatey(80px);
+  }
+  100%{
+    opacity:1;
+    transform:translatey(0px);
+  }
+}
